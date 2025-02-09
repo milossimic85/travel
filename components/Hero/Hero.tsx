@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="flex items-center w-full h-full justify-center flex-col">
           <div>
           <h1 className='text-[25px] lg:text-[55px] uppercase tracking-[0.7rem] xl:[45px] mb-4 md:mb-0 text-center font-semibold text-white'>Let&apos;s enjoy the Skiing!</h1>
-          <p className='md:text-based text-center font-normal text-lg [word-spacing:5px] text-white'>Get the best prices on 2,000,000+ properties,worldwide</p>
+          <p className='md:text-based text-center font-normal text-lg [word-spacing:5px] text-white'>Book your ski getaway today and create memories that last a lifetime!</p>
          </div>
          <SearchBox/>
          <Link
@@ -42,7 +42,7 @@ const Hero = () => {
          hover:bg-gradient-to-r hover:from-red-500 hover:to-red-400 text-white hover:ring-2 hover:ring-offset-2
          hover:ring-red-400 transition-all ease-out duration-300'>
   <span className='absolute right-0 w-8 h-32 mt-12 transition-all duration-1000 transform
-  translate-x-12 bg-white opacity-10 rotate-12 group-hover:translate-x-40 ease'></span>
+  translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease'></span>
   <span className='relative font-bold'>Search</span>
 </Link>
       </div>

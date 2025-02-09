@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <div className='relative w-full h-[120vh] sm:h-[100vh]'>
       <div className="absolute top-0 left-0 w-full h-full bg-gray-800 opacity-70"></div>
-      <video src='/images/hero1.mp4' autoPlay muted loop preload='metadata' 
+      <video src='/images/4274798-uhd_3840_2160_25fps.mp4' autoPlay muted loop preload='metadata' 
       className='w-full h-full object-cover' />
       <div className="absolute z-[100] w-full h-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
         <div className="flex items-center w-full h-full justify-center flex-col">

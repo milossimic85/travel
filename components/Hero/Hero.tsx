@@ -1,7 +1,29 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import SearchBox from '../Helper/SearchBox'
+import Link from 'next/link';
 
 const Hero = () => {
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // Make an API call to your 'api/skijasi' endpoint
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/skijasi');
+        if (response.ok) {
+          const result = await response.json();
+          setData(result);
+        } else {
+          console.error('Error fetching data');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <div className='relative w-full h-[120vh] sm:h-[100vh]'>
       <div className="absolute top-0 left-0 w-full h-full bg-gray-800 opacity-70"></div>
@@ -14,6 +36,15 @@ const Hero = () => {
           <p className='md:text-based text-center font-normal text-lg [word-spacing:5px] text-white'>Get the best prices on 2,000,000+ properties,worldwide</p>
          </div>
          <SearchBox/>
+         <Link
+  href="#"
+  className=' rounded px-14 md:px-28 py-2.5 -mt-4 overflow-hidden bg-rose-600 relative 
+         hover:bg-gradient-to-r hover:from-red-500 hover:to-red-400 text-white hover:ring-2 hover:ring-offset-2
+         hover:ring-red-400 transition-all ease-out duration-300'>
+  <span className='absolute right-0 w-8 h-32 mt-12 transition-all duration-1000 transform
+  translate-x-12 bg-white opacity-10 rotate-12 group-hover:translate-x-40 ease'></span>
+  <span className='relative font-bold'>Search</span>
+</Link>
       </div>
     </div>
     </div>
